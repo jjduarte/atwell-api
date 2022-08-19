@@ -1,5 +1,5 @@
 import chai, {expect} from 'chai'
-import api from '../../config/api.js'
+import api from '../config/api.js'
 
 describe('Testing unknown api paths', () => {
 

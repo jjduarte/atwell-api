@@ -1,6 +1,6 @@
-import { serverStatusRouterV1 } from './v1/server-status/serverStatus.controller.js'
-import { categoriesRouterV1 } from './v1/categories/categories.controller.js'
-import api from '../../config/api.js'
+import { serverStatusRouterV1 } from './rest/v1/server-status/serverStatus.controller.js'
+import { categoriesRouterV1 } from './rest/v1/categories/categories.controller.js'
+import api from '../config/api.js'
 
 const unknownRoute = (req, res, next) => {
     if (req.originalUrl === api.GRAPHQL_PATH) {

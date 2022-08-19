@@ -2,7 +2,7 @@ import api from './config/api.js'
 import { ApolloServer } from 'apollo-server-express'
 import express from 'express'
 import { allResolvers, allTypeDefs } from './utils/graphql.js'
-import { setupRoutes } from './api/rest/routes.js'
+import { setupRoutes } from './api/routes.js'
 
 let server
 
