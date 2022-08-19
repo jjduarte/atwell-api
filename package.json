@@ -1,0 +1,35 @@
+{
+  "name": "atwell-api",
+  "version": "0.0.1",
+  "description": "Demonstration project assignment to build a REST API server using TDD and NodeJS (GraphQL)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">= 18.7.0",
+    "npm": ">= 8.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjduarte/atwell-api.git"
+  },
+  "author": "Joao Lucio <duarte.jpdl@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jjduarte/atwell-api/issues"
+  },
+  "homepage": "https://github.com/jjduarte/atwell-api#readme",
+  "dependencies": {
+    "@graphql-tools/merge": "^8.3.3",
+    "apollo-server-express": "^3.10.1",
+    "express": "^4.18.1",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19"
+  }
+}
