@@ -14,6 +14,17 @@ const GET_VALID_QUERY = () => JSON.stringify({
     `,
 })
 
+const GET_INVALID_QUERY = () => JSON.stringify({
+    query: `
+        query categoriesQuery {
+            categories {
+                id
+                amount
+            }
+        }
+    `,
+})
+
 describe('Categories testing suite (graphQL)', () => {
 
     describe('Fetch all categories', () => {
@@ -31,6 +42,19 @@ describe('Categories testing suite (graphQL)', () => {
                 expect(res.body.data.categories[0].id).to.equal('spaces')
                 expect(res.body.data.categories[1].id).to.equal('fitness')
                 expect(res.body.data.categories[2].id).to.equal('womenshealth')
+            })
+        )
+
+        it('should return standard error object when querying for an undefined field (amount)', () => chai
+            .request(api.url())
+            .post(api.GRAPHQL_PATH)
+            .set('Content-Type', 'application/json')
+            .set('Accept', 'application/json')
+            .send(GET_INVALID_QUERY())
+            .then((res) => {
+                expect(res).to.have.status(400)
+                expect(res).to.be.json
+                expect(res.body.errors[0].message).to.match(/Cannot query field "amount" on type "Category"./)
             })
         )
     })
