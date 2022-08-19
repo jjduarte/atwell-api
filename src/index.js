@@ -9,7 +9,7 @@ let server
 const getApp = () => {
     const app = express()
     app.use(express.json())
-    setupRoutes(app, '/v1')
+    setupRoutes(app)
     return app
 }
 

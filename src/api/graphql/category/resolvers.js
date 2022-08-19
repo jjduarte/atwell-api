@@ -1,7 +1,9 @@
+import { getAll } from './services.js'
+
 const categoryResolvers = {
 
     Query: {
-        // todo:
+        categories: getAll,
     },
 }
 
