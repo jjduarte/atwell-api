@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon ./src/index.js",
-    "test": "mocha \"src/**/*.test.js\" --exit",
+    "test": "mocha --require \"src/config/test.js\" \"src/**/*.test.js\" --exit",
     "debug": "nodemon --inspect ./src/index.js"
   },
   "engines": {
