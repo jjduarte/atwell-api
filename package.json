@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "Demonstration project assignment to build a REST API server using TDD and NodeJS (GraphQL)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/index.js",
+    "test": "mocha \"src/**/*.test.js\" --exit",
+    "debug": "nodemon --inspect ./src/index.js"
   },
   "engines": {
     "node": ">= 18.7.0",
